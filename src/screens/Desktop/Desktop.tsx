@@ -422,7 +422,7 @@ export const Desktop = (): JSX.Element => {
               </Card>
             ))}
             
-            <Card className="w-[398px] h-[682px] rounded-[35px] border-2 border-solid border-[#0649e7] bg-transparent">
+            <Card className="w-[398px] h-[900px] rounded-[35px] border-2 border-solid border-[#0649e7] bg-transparent">
               <CardHeader className="pt-[27px] pb-0 px-[37px]">
                 <CardTitle className="font-semibold text-[#0649e7] text-[32px] tracking-[-1.28px]">
                   {pricingPlans[2].title}
