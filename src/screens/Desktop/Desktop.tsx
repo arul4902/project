@@ -136,9 +136,9 @@ export const Desktop = (): JSX.Element => {
     <div className="bg-[#fefefe] flex flex-row justify-center w-full">
       <div className="bg-[#fefefe] overflow-hidden w-full relative">
         {/* Hero Section */}
-        <header className="w-full h-[858px] relative bg-[url(/gradient.png)] bg-cover">
-          <nav className="flex justify-between items-center px-20 py-10">
-            <div className="flex items-center gap-4">
+        <header className="w-full h-auto md:h-[858px] relative bg-[url(/gradient.png)] bg-cover">
+          <nav className="flex flex-col md:flex-row justify-between items-center px-4 md:px-20 py-6 md:py-10">
+            <div className="flex items-center gap-4 mb-4 md:mb-0">
               <img
                 className="w-[76px] h-[50px]"
                 alt="Logo"
@@ -148,7 +148,7 @@ export const Desktop = (): JSX.Element => {
                 MobuisEngine
               </span>
             </div>
-            <div className="flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-8">
               {navItems.map((item, index) => (
                 <div key={index} className="font-medium text-[#fefefe] text-[25px] tracking-[-1.25px] cursor-pointer">
                   {item}
@@ -166,85 +166,87 @@ export const Desktop = (): JSX.Element => {
               Get Started
             </Button>
           </nav>
-          <div className="flex justify-between px-[300px] mt-20">
-            <div className="max-w-[780px]">
-              <h1 className="font-semibold text-[80px] tracking-[-1.60px] leading-[83.2px]">
+          <div className="flex flex-col md:flex-row justify-between px-4 md:px-[300px] mt-10 md:mt-20">
+            <div className="max-w-[780px] order-2 md:order-1 mt-10 md:mt-0">
+              <h1 className="font-semibold text-[40px] md:text-[80px] tracking-[-1.60px] leading-[1.2] md:leading-[83.2px]">
                 <span className="text-[#fefefe]">Land job interviews<br /></span>
                 <span className="text-[#0649e7]">10x</span>
                 <span className="text-[#fefefe]"> faster</span>
               </h1>
-              <p className="text-[#fefefe] text-xl mt-10 max-w-[613px]">
+              <p className="text-[#fefefe] text-lg md:text-xl mt-6 md:mt-10 max-w-[613px]">
                 Custom-built resumes that match your goals, keywords, and recruiter expectations.
               </p>
-              <Button className="mt-10 bg-[#fefefe] text-[#022183] rounded-[33.86px] h-[68px] w-[216px] text-[21.1px] font-medium">
+              <Button className="mt-6 md:mt-10 bg-[#fefefe] text-[#022183] rounded-[33.86px] h-[60px] md:h-[68px] w-[216px] text-[18px] md:text-[21.1px] font-medium">
                 Get Started →
               </Button>
             </div>
-            <div className="relative w-[354px] h-[445px]">
+            <div className="relative w-[280px] h-[350px] md:w-[354px] md:h-[445px] order-1 md:order-2 mx-auto md:mx-0">
               <img
-                className="absolute w-[301px] h-[390px] top-0 left-0 object-cover"
+                className="absolute w-[240px] h-[310px] md:w-[301px] md:h-[390px] top-0 left-0 object-cover"
                 alt="Image"
                 src="/image-1.png"
               />
-              <div className="absolute w-[121px] h-[121px] top-[303px] left-[227px] bg-[#d9d9d94c] rounded-[60.27px] border-[0.97px] border-solid border-[#fefefe] backdrop-blur-[6.8px]" />
-              <div className="absolute top-[333px] left-[257px] font-medium text-black text-[61.2px]">
+              <div className="absolute w-[90px] h-[90px] md:w-[121px] md:h-[121px] top-[240px] left-[180px] md:top-[303px] md:left-[227px] bg-[#d9d9d94c] rounded-[60.27px] border-[0.97px] border-solid border-[#fefefe] backdrop-blur-[6.8px]" />
+              <div className="absolute top-[265px] left-[205px] md:top-[333px] md:left-[257px] font-medium text-black text-[50px] md:text-[61.2px]">
                 📖
               </div>
-              <div className="absolute w-[25px] h-[25px] top-[402px] left-[246px] bg-[#fefefe] rounded-[12.64px]" />
-              <div className="absolute top-[410px] left-[255px] font-medium text-[#0649e7] text-[11.6px]">
+              <div className="absolute w-[20px] h-[20px] md:w-[25px] md:h-[25px] top-[320px] left-[195px] md:top-[402px] md:left-[246px] bg-[#fefefe] rounded-[12.64px]" />
+              <div className="absolute top-[325px] left-[203px] md:top-[410px] md:left-[255px] font-medium text-[#0649e7] text-[10px] md:text-[11.6px]">
                 ↙
               </div>
-              <p className="absolute top-[428px] left-[75px] font-medium text-white text-[17.5px]">
+              <p className="absolute top-[340px] left-[50px] md:top-[428px] md:left-[75px] font-medium text-white text-[14px] md:text-[17.5px]">
                 Download Free E-Book
               </p>
             </div>
           </div>
         </header>
+
         {/* How we work section */}
-        <section className="mt-16 px-[310px]">
-          <h2 className="font-medium text-[#0649e7] text-[40px] tracking-[-1.60px]">
+        <section className="mt-16 px-4 md:px-[310px]">
+          <h2 className="font-medium text-[#0649e7] text-[32px] md:text-[40px] tracking-[-1.60px] text-center md:text-left">
             How we work?
           </h2>
-          <div className="flex justify-between mt-10">
+          <div className="flex flex-col md:flex-row justify-between mt-10 gap-8 md:gap-0">
             {workSteps.map((step, index) => (
-              <div key={index} className="relative">
-                <div className="relative w-[82px] h-[82px] rounded-[40.82px] border-[1.51px] border-solid border-[#022183] flex items-center justify-center">
-                  <div className="font-normal text-black text-[56px]">{step.number}</div>
+              <div key={index} className="relative flex flex-col items-center md:items-start">
+                <div className="relative w-[70px] h-[70px] md:w-[82px] md:h-[82px] rounded-[40.82px] border-[1.51px] border-solid border-[#022183] flex items-center justify-center">
+                  <div className="font-normal text-black text-[40px] md:text-[56px]">{step.number}</div>
                 </div>
                 <img
-                  className="w-[213px] h-0.5 mt-5"
+                  className="w-[213px] h-0.5 mt-5 hidden md:block"
                   alt="Line"
                   src="/line-1.svg"
                 />
-                <p className="mt-5 font-medium text-[#0649e7] text-[26px] tracking-[-0.52px] max-w-[280px]">
+                <p className="mt-5 font-medium text-[#0649e7] text-[20px] md:text-[26px] tracking-[-0.52px] max-w-[280px] text-center md:text-left">
                   {step.title}
                 </p>
               </div>
             ))}
           </div>
         </section>
+
         {/* About Us section */}
-        <section className="mt-16 relative w-full h-[1140px]">
+        <section className="mt-16 relative w-full h-auto md:h-[1140px]">
           <img
             className="absolute w-full h-full object-cover"
             alt="Background"
             src="/clip-path-group.png"
           />
-          <div className="relative z-10 pt-[133px] px-[316px]">
-            <h2 className="font-medium text-[#fefefe] text-[40px] tracking-[-1.60px]">
+          <div className="relative z-10 pt-[50px] md:pt-[133px] px-4 md:px-[316px]">
+            <h2 className="font-medium text-[#fefefe] text-[32px] md:text-[40px] tracking-[-1.60px] text-center md:text-left">
               About Us
             </h2>
-            <div className="flex mt-[134px] gap-10">
-              <div className="relative h-[275px] w-[262px]">
-                <div className="absolute w-[262px] h-[262px] top-0 left-0 bg-[#fefefe] rounded-[131.17px] bg-[url(/mask-group.png)] bg-cover" />
-                <div className="absolute w-20 h-20 top-[195px] left-[173px] bg-[#d9d9d94c] rounded-[39.8px] border-[1.06px] border-solid border-[#fefefe] backdrop-blur-[7.45px]" />
+            <div className="flex flex-col md:flex-row mt-[50px] md:mt-[134px] gap-10">
+              <div className="relative h-[200px] w-[200px] md:h-[275px] md:w-[262px] mx-auto md:mx-0">
+                <div className="absolute w-[200px] h-[200px] md:w-[262px] md:h-[262px] top-0 left-0 bg-[#fefefe] rounded-[131.17px] bg-[url(/mask-group.png)] bg-cover" />
+                <div className="absolute w-14 h-14 md:w-20 md:h-20 top-[150px] left-[130px] md:top-[195px] md:left-[173px] bg-[#d9d9d94c] rounded-[39.8px] border-[1.06px] border-solid border-[#fefefe] backdrop-blur-[7.45px]" />
                 <img
-                  className="absolute w-[31px] h-[30px] top-[220px] left-[197px]"
+                  className="absolute w-[25px] h-[24px] md:w-[31px] md:h-[30px] top-[170px] left-[150px] md:top-[220px] md:left-[197px]"
                   alt="Shape"
                   src="/shape.svg"
                 />
               </div>
-              <div className="max-w-[537px] text-[#fefefe] text-lg">
+              <div className="max-w-[537px] text-[#fefefe] text-base md:text-lg text-center md:text-left">
                 <p>
                   <span className="font-bold">Ashwin</span> is the founder of mobiusengine.ai. He is an accomplished senior
                   executive with over 20 years of experience in cloud
@@ -257,17 +259,17 @@ export const Desktop = (): JSX.Element => {
                 </p>
               </div>
             </div>
-            <div className="flex mt-[80px] gap-10">
-              <div className="relative h-[279px] w-[266px]">
-                <div className="absolute w-[266px] h-[266px] top-0 left-0 bg-[#fefefe] rounded-[133.08px] bg-[url(/image-3.png)] bg-cover" />
-                <div className="absolute w-[81px] h-[81px] top-[198px] left-[175px] bg-[#d9d9d94c] rounded-[40.38px] border-[1.06px] border-solid border-[#fefefe] backdrop-blur-[7.45px]" />
+            <div className="flex flex-col md:flex-row mt-[50px] md:mt-[80px] gap-10">
+              <div className="relative h-[200px] w-[200px] md:h-[279px] md:w-[266px] mx-auto md:mx-0">
+                <div className="absolute w-[200px] h-[200px] md:w-[266px] md:h-[266px] top-0 left-0 bg-[#fefefe] rounded-[133.08px] bg-[url(/image-3.png)] bg-cover" />
+                <div className="absolute w-14 h-14 md:w-[81px] md:h-[81px] top-[150px] left-[130px] md:top-[198px] md:left-[175px] bg-[#d9d9d94c] rounded-[40.38px] border-[1.06px] border-solid border-[#fefefe] backdrop-blur-[7.45px]" />
                 <img
-                  className="absolute w-8 h-[30px] top-56 left-[199px]"
+                  className="absolute w-6 h-[24px] md:w-8 md:h-[30px] top-[170px] left-[150px] md:top-56 md:left-[199px]"
                   alt="Shape"
                   src="/shape-1.svg"
                 />
               </div>
-              <div className="max-w-[537px] text-[#fefefe] text-lg">
+              <div className="max-w-[537px] text-[#fefefe] text-base md:text-lg text-center md:text-left">
                 <p>
                   <span className="font-bold">Nicole</span> is an Executive coach at Mobius specializing in resume builds
                   and career advisory. 
@@ -281,26 +283,27 @@ export const Desktop = (): JSX.Element => {
                 </p>
               </div>
             </div>
-            <div className="mt-[200px] text-center">
-              <p className="text-white text-lg">
-                Learn more about our Board of Advisors� ↗
+            <div className="mt-[50px] md:mt-[200px] text-center">
+              <p className="text-white text-base md:text-lg">
+                Learn more about our Board of Advisors ↗
               </p>
-              <p className="text-white text-lg mt-5">
+              <p className="text-white text-base md:text-lg mt-5">
                 Follow us on our Linkedin page ↗
               </p>
             </div>
           </div>
         </section>
+
         {/* Testimonials section */}
-        <section className="mt-16 px-[310px]">
-          <h2 className="font-medium text-[#0649e7] text-[40px] tracking-[-1.60px]">
+        <section className="mt-16 px-4 md:px-[310px]">
+          <h2 className="font-medium text-[#0649e7] text-[32px] md:text-[40px] tracking-[-1.60px] text-center md:text-left">
             What our clients have to say
           </h2>
-          <div className="flex gap-6 mt-10">
+          <div className="flex flex-col md:flex-row gap-6 mt-10">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="w-[650px] h-[480px] rounded-[35px] bg-[#0649e7] overflow-hidden">
-                <div className="w-full h-[263px] bg-[#fefefe] rounded-[35px] border-2 border-solid border-[#0649e7] relative">
-                  <div className="absolute w-[47px] h-[47px] top-[108px] left-[174px] bg-[#0649e7] rounded-[23.5px] flex items-center justify-center">
+              <Card key={index} className="w-full md:w-[650px] h-[400px] md:h-[480px] rounded-[35px] bg-[#0649e7] overflow-hidden">
+                <div className="w-full h-[200px] md:h-[263px] bg-[#fefefe] rounded-[35px] border-2 border-solid border-[#0649e7] relative">
+                  <div className="absolute w-[40px] h-[40px] md:w-[47px] md:h-[47px] top-[80px] left-[50%] transform -translate-x-1/2 md:top-[108px] md:left-[174px] bg-[#0649e7] rounded-[23.5px] flex items-center justify-center">
                     <img
                       className="w-3 h-3.5"
                       alt="Play"
@@ -309,7 +312,7 @@ export const Desktop = (): JSX.Element => {
                   </div>
                 </div>
                 <CardContent className="p-5">
-                  <p className="text-[#fefefe] text-xl">
+                  <p className="text-[#fefefe] text-base md:text-xl">
                     {testimonial.content.split(" ").map((word, i) =>
                       word === "senior" || word === "executive" || word === "10" ? 
                         <span key={i} className="font-bold">{word} </span> : 
@@ -318,49 +321,50 @@ export const Desktop = (): JSX.Element => {
                   </p>
                 </CardContent>
                 <CardFooter className="flex justify-end">
-                  <div className="w-[57px] h-[57px] bg-[#fefefe] rounded-[28.5px] flex items-center justify-center">
-                    <span className="text-[#0649e7] text-[26px]">↗</span>
+                  <div className="w-[50px] h-[50px] md:w-[57px] md:h-[57px] bg-[#fefefe] rounded-[28.5px] flex items-center justify-center">
+                    <span className="text-[#0649e7] text-[22px] md:text-[26px]">↗</span>
                   </div>
                 </CardFooter>
               </Card>
             ))}
           </div>
-          <div className="flex justify-center gap-6 mt-16">
-            <Button variant="outline" className="h-[62px] w-[350px] rounded-[36px] border-2 border-[#0649e7] text-[#0649e7] text-xl">
+          <div className="flex flex-col md:flex-row justify-center gap-6 mt-10 md:mt-16">
+            <Button variant="outline" className="h-[50px] md:h-[62px] w-full md:w-[350px] rounded-[36px] border-2 border-[#0649e7] text-[#0649e7] text-lg md:text-xl">
               More customer testimonials ↗
             </Button>
-            <Button className="h-[62px] w-[211px] rounded-[36px] bg-[#0649e7] text-[#fefefe] text-xl font-semibold">
+            <Button className="h-[50px] md:h-[62px] w-full md:w-[211px] rounded-[36px] bg-[#0649e7] text-[#fefefe] text-lg md:text-xl font-semibold">
               Get Started →
             </Button>
           </div>
         </section>
+
         {/* Why Choose Us section */}
-        <section className="mt-16 px-[254px]">
+        <section className="mt-16 px-4 md:px-[254px]">
           <Card className="w-full rounded-[35px] bg-[#f8faff] border-none">
             <CardHeader>
-              <CardTitle className="text-[#022183] text-[40px] font-medium tracking-[-1.60px]">
+              <CardTitle className="text-[#022183] text-[32px] md:text-[40px] font-medium tracking-[-1.60px] text-center md:text-left">
                 Why Choose Us?
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="flex gap-6">
+              <div className="flex flex-col md:flex-row gap-6">
                 {whyChooseUs.map((item, index) => (
-                  <Card key={index} className="w-[359px] h-[316px] rounded-[35px] border-[1.51px] border-solid border-[#022183] bg-transparent">
+                  <Card key={index} className="w-full md:w-[359px] h-auto md:h-[316px] rounded-[35px] border-[1.51px] border-solid border-[#022183] bg-transparent">
                     <CardContent className="p-0">
-                      <div className="h-[146px] flex items-center justify-center">
+                      <div className="h-[120px] md:h-[146px] flex items-center justify-center">
                         {index === 0 ? (
-                          <div className="w-[65px] h-14 bg-[url(/group.png)] bg-cover" />
+                          <div className="w-[50px] md:w-[65px] h-[50px] md:h-14 bg-[url(/group.png)] bg-cover" />
                         ) : index === 1 ? (
-                          <img className="w-[51px] h-14" alt="Profile" src="/profile-1.svg" />
+                          <img className="w-[40px] md:w-[51px] h-[50px] md:h-14" alt="Profile" src="/profile-1.svg" />
                         ) : (
-                          <img className="w-[58px] h-14" alt="Star" src="/star-1.svg" />
+                          <img className="w-[45px] md:w-[58px] h-[50px] md:h-14" alt="Star" src="/star-1.svg" />
                         )}
                       </div>
-                      <div className="px-[30px]">
-                        <h3 className="font-semibold text-[#022183] text-2xl tracking-[-0.96px]">
+                      <div className="px-[20px] md:px-[30px] py-6 md:py-0">
+                        <h3 className="font-semibold text-[#022183] text-xl md:text-2xl tracking-[-0.96px] text-center md:text-left">
                           {item.title}
                         </h3>
-                        <p className="mt-5 font-normal text-[#022183] text-lg tracking-[-0.36px]">
+                        <p className="mt-5 font-normal text-[#022183] text-base md:text-lg tracking-[-0.36px] text-center md:text-left">
                           {item.description}
                         </p>
                       </div>
@@ -371,35 +375,36 @@ export const Desktop = (): JSX.Element => {
             </CardContent>
           </Card>
         </section>
+
         {/* Job Application Service Plans */}
-        <section className="mt-16 px-[310px]">
-          <h2 className="font-semibold text-[#0649e7] text-[40px] tracking-[-1.60px]">
+        <section className="mt-16 px-4 md:px-[310px]">
+          <h2 className="font-semibold text-[#0649e7] text-[32px] md:text-[40px] tracking-[-1.60px] text-center md:text-left">
             Job Application Service Plans
           </h2>
-          <div className="flex gap-6 mt-10">
+          <div className="flex flex-col md:flex-row gap-6 mt-10">
             {pricingPlans.slice(0, 2).map((plan, index) => (
-              <Card key={index} className="w-[398px] h-[900px] rounded-[35px] border-2 border-solid border-[#0649e7] bg-transparent">
-                <CardHeader className="pt-[27px] pb-0 px-[37px]">
+              <Card key={index} className="w-full md:w-[398px] h-auto md:h-[900px] rounded-[35px] border-2 border-solid border-[#0649e7] bg-transparent">
+                <CardHeader className="pt-[27px] pb-0 px-[20px] md:px-[37px]">
                   <div className="flex justify-between items-center">
-                    <CardTitle className="font-semibold text-[#0649e7] text-[32px] tracking-[-1.28px]">
+                    <CardTitle className="font-semibold text-[#0649e7] text-[26px] md:text-[32px] tracking-[-1.28px]">
                       {plan.title}
                     </CardTitle>
                     {plan.popular && (
-                      <Badge className="bg-[#eaf0ff] text-[#0649e7] border border-[#0649e7] rounded-[35px] h-9 px-4 font-medium">
+                      <Badge className="bg-[#eaf0ff] text-[#0649e7] border border-[#0649e7] rounded-[35px] h-8 md:h-9 px-3 md:px-4 font-medium">
                         Popular
                       </Badge>
                     )}
                   </div>
-                  <div className="mt-10 font-normal text-[#0649e7] text-[56px] tracking-[-2.24px]">
+                  <div className="mt-6 md:mt-10 font-normal text-[#0649e7] text-[40px] md:text-[56px] tracking-[-2.24px]">
                     <span className="font-bold">{plan.price}</span>
-                    <span className="font-bold text-[26px]">{plan.period}</span>
+                    <span className="font-bold text-[20px] md:text-[26px]">{plan.period}</span>
                   </div>
                 </CardHeader>
-                <CardContent className="pt-6 px-[37px]">
+                <CardContent className="pt-6 px-[20px] md:px-[37px]">
                   <Separator className="mb-6 bg-[#0649e7]" />
-                  <ul className="space-y-5">
+                  <ul className="space-y-4 md:space-y-5">
                     {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-[31px]">
+                      <li key={i} className="flex items-start gap-[20px] md:gap-[31px]">
                         <div className="w-5 h-5 bg-[#49d157] rounded-[10px] flex items-center justify-center mt-0.5">
                           <img
                             className="w-[11px] h-2.5"
@@ -407,36 +412,36 @@ export const Desktop = (): JSX.Element => {
                             src="/vector-2.svg"
                           />
                         </div>
-                        <span className="font-medium text-[#0649e7] text-lg tracking-[-0.72px]">
+                        <span className="font-medium text-[#0649e7] text-base md:text-lg tracking-[-0.72px]">
                           {feature}
                         </span>
                       </li>
                     ))}
                   </ul>
                 </CardContent>
-                <CardFooter className="px-[33px]">
-                  <Button className="w-[211px] h-[62px] bg-[#0649e7] text-[#fefefe] rounded-[36px] text-xl font-semibold">
+                <CardFooter className="px-[20px] md:px-[33px] py-6 md:py-0">
+                  <Button className="w-full md:w-[211px] h-[50px] md:h-[62px] bg-[#0649e7] text-[#fefefe] rounded-[36px] text-lg md:text-xl font-semibold">
                     Get Started →
                   </Button>
                 </CardFooter>
               </Card>
             ))}
             
-            <Card className="w-[398px] h-[900px] rounded-[35px] border-2 border-solid border-[#0649e7] bg-transparent">
-              <CardHeader className="pt-[27px] pb-0 px-[37px]">
-                <CardTitle className="font-semibold text-[#0649e7] text-[32px] tracking-[-1.28px]">
+            <Card className="w-full md:w-[398px] h-auto md:h-[900px] rounded-[35px] border-2 border-solid border-[#0649e7] bg-transparent">
+              <CardHeader className="pt-[27px] pb-0 px-[20px] md:px-[37px]">
+                <CardTitle className="font-semibold text-[#0649e7] text-[26px] md:text-[32px] tracking-[-1.28px]">
                   {pricingPlans[2].title}
                 </CardTitle>
-                <div className="mt-10 font-normal text-[#0649e7] text-[56px] tracking-[-2.24px]">
+                <div className="mt-6 md:mt-10 font-normal text-[#0649e7] text-[40px] md:text-[56px] tracking-[-2.24px]">
                   <span className="font-bold">{pricingPlans[2].price}</span>
-                  <span className="font-bold text-[26px]">{pricingPlans[2].period}</span>
+                  <span className="font-bold text-[20px] md:text-[26px]">{pricingPlans[2].period}</span>
                 </div>
               </CardHeader>
-              <CardContent className="pt-6 px-[37px]">
+              <CardContent className="pt-6 px-[20px] md:px-[37px]">
                 <Separator className="mb-6 bg-[#0649e7]" />
-                <ul className="space-y-5">
+                <ul className="space-y-4 md:space-y-5">
                   {pricingPlans[2].features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-[31px]">
+                    <li key={i} className="flex items-start gap-[20px] md:gap-[31px]">
                       <div className="w-5 h-5 bg-[#49d157] rounded-[10px] flex items-center justify-center mt-0.5">
                         <img
                           className="w-[11px] h-2.5"
@@ -444,33 +449,33 @@ export const Desktop = (): JSX.Element => {
                           src="/vector-2.svg"
                         />
                       </div>
-                      <span className="font-medium text-[#0649e7] text-lg tracking-[-0.72px]">
+                      <span className="font-medium text-[#0649e7] text-base md:text-lg tracking-[-0.72px]">
                         {feature}
                       </span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
-              <CardFooter className="px-[33px]">
-                <Button className="w-[211px] h-[62px] bg-[#0649e7] text-[#fefefe] rounded-[36px] text-xl font-semibold">
+              <CardFooter className="px-[20px] md:px-[33px] py-6 md:py-0">
+                <Button className="w-full md:w-[211px] h-[50px] md:h-[62px] bg-[#0649e7] text-[#fefefe] rounded-[36px] text-lg md:text-xl font-semibold">
                   Get Started →
                 </Button>
               </CardFooter>
             </Card>
           </div>
           {/* Advance plan */}
-          <Card className="w-full h-[350px] bg-[#0649e7] rounded-[35px] mt-10 border-none">
-            <CardContent className="flex justify-between p-0">
-              <div className="p-[39px]">
-                <h3 className="font-semibold text-[#fefefe] text-[32px] tracking-[-1.28px]">
+          <Card className="w-full h-auto md:h-[350px] bg-[#0649e7] rounded-[35px] mt-10 border-none">
+            <CardContent className="flex flex-col md:flex-row justify-between p-0">
+              <div className="p-[20px] md:p-[39px]">
+                <h3 className="font-semibold text-[#fefefe] text-[26px] md:text-[32px] tracking-[-1.28px]">
                   Advance
                 </h3>
-                <p className="mt-3 font-semibold text-[#fefefe] text-lg tracking-[-0.72px]">
+                <p className="mt-3 font-semibold text-[#fefefe] text-base md:text-lg tracking-[-0.72px]">
                   Top-tier support for serious job hunters:
                 </p>
                 <Separator className="my-6 bg-[#fefefe]" />
-                <div className="grid grid-cols-2 gap-y-10 gap-x-8">
-                  <div className="flex items-start gap-[31px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-10 gap-x-8">
+                  <div className="flex items-start gap-[20px] md:gap-[31px]">
                     <div className="w-5 h-5 bg-[#49d157] rounded-[10px] flex items-center justify-center mt-0.5">
                       <img
                         className="w-[11px] h-2.5"
@@ -478,11 +483,11 @@ export const Desktop = (): JSX.Element => {
                         src="/vector-2.svg"
                       />
                     </div>
-                    <span className="font-medium text-[#fefefe] text-lg tracking-[-0.72px]">
+                    <span className="font-medium text-[#fefefe] text-base md:text-lg tracking-[-0.72px]">
                       Everything in Plus
                     </span>
                   </div>
-                  <div className="flex items-start gap-[31px]">
+                  <div className="flex items-start gap-[20px] md:gap-[31px]">
                     <div className="w-5 h-5 bg-[#49d157] rounded-[10px] flex items-center justify-center mt-0.5">
                       <img
                         className="w-[11px] h-2.5"
@@ -490,11 +495,11 @@ export const Desktop = (): JSX.Element => {
                         src="/vector-2.svg"
                       />
                     </div>
-                    <span className="font-medium text-[#fefefe] text-lg tracking-[-0.72px]">
+                    <span className="font-medium text-[#fefefe] text-base md:text-lg tracking-[-0.72px]">
                       Custom Resumes & Cover Letters
                     </span>
                   </div>
-                  <div className="flex items-start gap-[31px]">
+                  <div className="flex items-start gap-[20px] md:gap-[31px]">
                     <div className="w-5 h-5 bg-[#49d157] rounded-[10px] flex items-center justify-center mt-0.5">
                       <img
                         className="w-[11px] h-2.5"
@@ -502,11 +507,11 @@ export const Desktop = (): JSX.Element => {
                         src="/vector-2.svg"
                       />
                     </div>
-                    <span className="font-medium text-[#fefefe] text-lg tracking-[-0.72px]">
+                    <span className="font-medium text-[#fefefe] text-base md:text-lg tracking-[-0.72px]">
                       Up to 75 apps/week
                     </span>
                   </div>
-                  <div className="flex items-start gap-[31px]">
+                  <div className="flex items-start gap-[20px] md:gap-[31px]">
                     <div className="w-5 h-5 bg-[#49d157] rounded-[10px] flex items-center justify-center mt-0.5">
                       <img
                         className="w-[11px] h-2.5"
@@ -514,54 +519,55 @@ export const Desktop = (): JSX.Element => {
                         src="/vector-2.svg"
                       />
                     </div>
-                    <span className="font-medium text-[#fefefe] text-lg tracking-[-0.72px]">
+                    <span className="font-medium text-[#fefefe] text-base md:text-lg tracking-[-0.72px]">
                       Analyst + full application team on Pacific hours
                     </span>
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col justify-between p-12">
-                <div className="font-normal text-[#fefefe] text-[56px] tracking-[-2.24px] text-right">
+              <div className="flex flex-col justify-between p-6 md:p-12">
+                <div className="font-normal text-[#fefefe] text-[40px] md:text-[56px] tracking-[-2.24px] text-center md:text-right">
                   <span className="font-bold">$150</span>
-                  <span className="font-bold text-[26px]">/week</span>
+                  <span className="font-bold text-[20px] md:text-[26px]">/week</span>
                 </div>
-                <Button className="w-[211px] h-[62px] bg-[#fefefe] text-[#0649e7] rounded-[36px] text-xl font-semibold self-end">
+                <Button className="w-full md:w-[211px] h-[50px] md:h-[62px] bg-[#fefefe] text-[#0649e7] rounded-[36px] text-lg md:text-xl font-semibold self-center md:self-end mt-6 md:mt-0">
                   Get Started →
                 </Button>
               </div>
             </CardContent>
           </Card>
         </section>
+
         {/* Resume Building & Coaching */}
-        <section className="mt-16 px-[310px]">
-          <h2 className="font-semibold text-[#0649e7] text-[40px] tracking-[-1.60px]">
+        <section className="mt-16 px-4 md:px-[310px]">
+          <h2 className="font-semibold text-[#0649e7] text-[32px] md:text-[40px] tracking-[-1.60px] text-center md:text-left">
             Resume Building & Coaching
           </h2>
           <Separator className="my-6 bg-[#0649e7]" />
-          <p className="font-medium text-[#0649e7] text-lg tracking-[-0.72px]">
+          <p className="font-medium text-[#0649e7] text-base md:text-lg tracking-[-0.72px] text-center md:text-left">
             Let's talk about where you're headed — and how your resume can get you there.{" "}
             <span className="font-bold">Schedule a call to get started.</span>
           </p>
-          <div className="flex justify-center gap-10 mt-10">
+          <div className="flex flex-col md:flex-row justify-center gap-10 mt-10">
             {coachingServices.map((service, index) => (
-              <Card key={index} className="w-[450px] h-[900px] rounded-[35px] border-2 border-solid border-[#0649e7] bg-transparent">
-                <CardHeader className="pt-7 pb-0 px-[37px]">
-                  <CardTitle className="font-semibold text-[#0649e7] text-[32px] tracking-[-1.28px]">
+              <Card key={index} className="w-full md:w-[450px] h-auto md:h-[900px] rounded-[35px] border-2 border-solid border-[#0649e7] bg-transparent">
+                <CardHeader className="pt-7 pb-0 px-[20px] md:px-[37px]">
+                  <CardTitle className="font-semibold text-[#0649e7] text-[26px] md:text-[32px] tracking-[-1.28px]">
                     {service.title}
                   </CardTitle>
-                  <p className="mt-4 font-medium text-[#0649e7] text-lg tracking-[-0.72px]">
+                  <p className="mt-4 font-medium text-[#0649e7] text-base md:text-lg tracking-[-0.72px]">
                     {service.description}
                   </p>
-                  <div className="mt-10 font-normal text-[#0649e7] text-[56px] tracking-[-2.24px]">
+                  <div className="mt-6 md:mt-10 font-normal text-[#0649e7] text-[40px] md:text-[56px] tracking-[-2.24px]">
                     <span className="font-bold">{service.price}</span>
-                    <span className="font-bold text-[26px]"> {service.period}</span>
+                    <span className="font-bold text-[20px] md:text-[26px]"> {service.period}</span>
                   </div>
                 </CardHeader>
-                <CardContent className="pt-6 px-[37px]">
+                <CardContent className="pt-6 px-[20px] md:px-[37px]">
                   <Separator className="mb-6 bg-[#0649e7]" />
-                  <ul className="space-y-5">
+                  <ul className="space-y-4 md:space-y-5">
                     {service.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-[31px]">
+                      <li key={i} className="flex items-start gap-[20px] md:gap-[31px]">
                         <div className="w-5 h-5 bg-[#49d157] rounded-[10px] flex items-center justify-center mt-0.5">
                           <img
                             className="w-[11px] h-2.5"
@@ -569,15 +575,15 @@ export const Desktop = (): JSX.Element => {
                             src="/vector-2.svg"
                           />
                         </div>
-                        <span className="font-medium text-[#0649e7] text-lg tracking-[-0.72px]">
+                        <span className="font-medium text-[#0649e7] text-base md:text-lg tracking-[-0.72px]">
                           {feature}
                         </span>
                       </li>
                     ))}
                   </ul>
                 </CardContent>
-                <CardFooter className="px-[33px]">
-                  <Button className="w-[211px] h-[62px] bg-[#0649e7] text-[#fefefe] rounded-[36px] text-xl font-semibold">
+                <CardFooter className="px-[20px] md:px-[33px] py-6 md:py-0">
+                  <Button className="w-full md:w-[211px] h-[50px] md:h-[62px] bg-[#0649e7] text-[#fefefe] rounded-[36px] text-lg md:text-xl font-semibold">
                     Get Started →
                   </Button>
                 </CardFooter>
@@ -585,50 +591,49 @@ export const Desktop = (): JSX.Element => {
             ))}
           </div>
         </section>
+
         {/* Contact Section */}
-        <section className="mt-32 bg-[#0649e7] rounded-[35px] mx-[310px] p-16 flex justify-between items-center">
-          <div>
-            <h2 className="text-[#fefefe] text-[32px] font-semibold mb-2">STILL HAVE DOUBTS?</h2>
-            <h3 className="text-[#fefefe] text-[56px] font-semibold">Contact us</h3>
+        <section className="mt-16 md:mt-32 bg-[#0649e7] rounded-[35px] mx-4 md:mx-[310px] p-8 md:p-16 flex flex-col md:flex-row justify-between items-center">
+          <div className="text-center md:text-left mb-6 md:mb-0">
+            <h2 className="text-[#fefefe] text-[24px] md:text-[32px] font-semibold mb-2">STILL HAVE DOUBTS?</h2>
+            <h3 className="text-[#fefefe] text-[40px] md:text-[56px] font-semibold">Contact us</h3>
           </div>
-          <Button className="w-[62px] h-[62px] rounded-full bg-[#fefefe] flex items-center justify-center">
-            <span className="text-[#0649e7] text-2xl">→</span>
+          <Button className="w-[50px] h-[50px] md:w-[62px] md:h-[62px] rounded-full bg-[#fefefe] flex items-center justify-center">
+            <span className="text-[#0649e7] text-xl md:text-2xl">→</span>
           </Button>
         </section>
+
         {/* Footer */}
-        <footer className="w-full bg-[#0649e7] mt-32">
+        <footer className="w-full bg-[#0649e7] mt-16 md:mt-32">
           <div className="max-w-[1920px] mx-auto">
             {/* Upper footer with white background */}
-            <div className="bg-white px-[103px] pt-[72px] pb-[124px]">
+            <div className="bg-white px-4 md:px-[103px] pt-8 md:pt-[72px] pb-12 md:pb-[124px]">
               {/* Logo and company info */}
-              <div className="mb-[126px]">
-                <div className="w-[151px] h-[86px] mb-[108px]">
+              <div className="mb-12 md:mb-[126px]">
+                <div className="w-[120px] md:w-[151px] h-[70px] md:h-[86px] mb-8 md:mb-[108px]">
                   <img
-                    className="w-[74px] h-12"
+                    className="w-[60px] md:w-[74px] h-[40px] md:h-12"
                     alt="Logo"
                     src="/group-21-1.png"
                   />
-                  <div className="font-semibold text-[#0649e7] text-[25.3px] tracking-[-1.77px] leading-[37.4px]">
+                  <div className="font-semibold text-[#0649e7] text-[20px] md:text-[25.3px] tracking-[-1.77px] leading-[37.4px]">
                     MobiusEngine
                   </div>
                 </div>
               </div>
 
               {/* Contact information grid */}
-              <div className="grid grid-cols-4 gap-[345px]">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-[345px]">
                 <div>
                   <h3 className="font-semibold text-[#0649e7] text-base tracking-[-0.64px] leading-[16.6px] underline mb-[10px]">
                     Address
                   </h3>
-                  <p className="font-medium text-[#0649e7] text-lg tracking-[-0.72px] leading-[18.7px]">
-                    1875 Mission St Ste 103 #450<br />
-                    San Francisco, CA 94103
+                  <p className="font-medium text-[#0649e7] text-[#0649e7] text-base leading-relaxed">
+                    1875 Mission St Ste 103 #450 San Francisco, CA 94103
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#0649e7] text-base tracking-[-0.64px] leading-[16.6px] underline mb-[10px]">
-                    Email
-                  </h3>
+                  <h3 className="font-medium text-[#0649e7] text-lg mb-4 underline">Email</h3>
                   <a
                     href="mailto:finance@mobiusengine.ai"
                     className="font-medium text-[#0649e7] text-lg tracking-[-0.72px] leading-[18.7px] underline"
@@ -649,16 +654,16 @@ export const Desktop = (): JSX.Element => {
                     Socials
                   </h3>
                   <div className="flex gap-2">
-                    <div className="w-[45px] h-[45px] rounded-[22.34px] border-[1.49px] border-solid border-[#0649e7] flex items-center justify-center">
+                    <div className="w-[40px] h-[40px] md:w-[45px] md:h-[45px] rounded-[22.34px] border-[1.49px] border-solid border-[#0649e7] flex items-center justify-center">
                       <img
-                        className="w-[19px] h-[18px]"
+                        className="w-[16px] h-[15px] md:w-[19px] md:h-[18px]"
                         alt="LinkedIn"
                         src="/shape-1.svg"
                       />
                     </div>
-                    <div className="w-[45px] h-[45px] rounded-[22.34px] border-[1.49px] border-solid border-[#0649e7] flex items-center justify-center">
+                    <div className="w-[40px] h-[40px] md:w-[45px] md:h-[45px] rounded-[22.34px] border-[1.49px] border-solid border-[#0649e7] flex items-center justify-center">
                       <img
-                        className="w-[19px] h-[18px]"
+                        className="w-[16px] h-[15px] md:w-[19px] md:h-[18px]"
                         alt="Social"
                         src="/shape.svg"
                       />
@@ -669,15 +674,15 @@ export const Desktop = (): JSX.Element => {
             </div>
 
             {/* Bottom footer with blue background */}
-            <div className="h-[69px] bg-[#0649e7] px-[103px] flex items-center justify-between">
-              <p className="font-medium text-[#fefefe] text-base tracking-[-0.64px] leading-[16.6px]">
+            <div className="h-[60px] md:h-[69px] bg-[#0649e7] px-4 md:px-[103px] flex flex-col md:flex-row items-center justify-between py-4 md:py-0">
+              <p className="font-medium text-[#fefefe] text-sm md:text-base tracking-[-0.64px] leading-[16.6px] mb-2 md:mb-0">
                 © 2023 Mobiusservices LLC
               </p>
-              <div className="flex gap-[50px]">
-                <a href="#" className="font-medium text-[#fefefe] text-base tracking-[-0.64px] leading-[16.6px]">
+              <div className="flex gap-4 md:gap-[50px]">
+                <a href="#" className="font-medium text-[#fefefe] text-sm md:text-base tracking-[-0.64px] leading-[16.6px]">
                   Terms & Conditions
                 </a>
-                <a href="#" className="font-medium text-[#fefefe] text-base tracking-[-0.64px] leading-[16.6px]">
+                <a href="#" className="font-medium text-[#fefefe] text-sm md:text-base tracking-[-0.64px] leading-[16.6px]">
                   Privacy Policy
                 </a>
               </div>
