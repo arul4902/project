@@ -603,92 +603,110 @@ export const Desktop = (): JSX.Element => {
           </Button>
         </section>
 
-        {/* Footer */}
-        <footer className="w-full bg-[#0649e7] mt-16 md:mt-32">
-          <div className="max-w-[1920px] mx-auto">
-            {/* Upper footer with white background */}
-            <div className="bg-white px-4 md:px-[103px] pt-8 md:pt-[72px] pb-12 md:pb-[124px]">
-              {/* Logo and company info */}
-              <div className="mb-12 md:mb-[126px]">
-                <div className="w-[120px] md:w-[151px] h-[70px] md:h-[86px] mb-8 md:mb-[108px]">
-                  <img
-                    className="w-[60px] md:w-[74px] h-[40px] md:h-12"
-                    alt="Logo"
-                    src="/group-21-1.png"
-                  />
-                  <div className="font-semibold text-[#0649e7] text-[20px] md:text-[25.3px] tracking-[-1.77px] leading-[37.4px]">
-                    MobiusEngine
-                  </div>
-                </div>
-              </div>
+       {/* Footer */}
+<footer className="w-full bg-[#0649e7] mt-16 md:mt-32">
+  <div className="max-w-[1920px] mx-auto">
+    {/* Upper footer with white background */}
+    <div className="bg-white px-4 md:px-[103px] pt-8 md:pt-[72px] pb-12 md:pb-[124px]">
+      
+      {/* Logo and company name side-by-side */}
+      <div className="flex items-center mb-12 md:mb-[100px] gap-4">
+        <img
+          className="w-[60px] md:w-[74px] h-[40px] md:h-12"
+          alt="Logo"
+          src="/group-21-1.png"
+        />
+        <div className="font-semibold text-[#0649e7] text-[20px] md:text-[25.3px] tracking-[-1.77px] leading-[37.4px]">
+          MobiusEngine
+        </div>
+      </div>
 
-              {/* Contact information grid */}
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-[345px]">
-                <div>
-                  <h3 className="font-semibold text-[#0649e7] text-base tracking-[-0.64px] leading-[16.6px] underline mb-[10px]">
-                    Address
-                  </h3>
-                  <p className="font-medium text-[#0649e7] text-[#0649e7] text-base leading-relaxed">
-                    1875 Mission St Ste 103 #450 San Francisco, CA 94103
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-medium text-[#0649e7] text-lg mb-4 underline">Email</h3>
-                  <a
-                    href="mailto:finance@mobiusengine.ai"
-                    className="font-medium text-[#0649e7] text-lg tracking-[-0.72px] leading-[18.7px] underline"
-                  >
-                    finance@mobiusengine.ai
-                  </a>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-[#0649e7] text-base tracking-[-0.64px] leading-[16.6px] underline mb-[10px]">
-                    Telephone
-                  </h3>
-                  <p className="font-medium text-[#0649e7] text-lg tracking-[-0.72px] leading-[18.7px]">
-                    650-889-6026
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-[#0649e7] text-base tracking-[-0.64px] leading-[16.6px] underline mb-[10px]">
-                    Socials
-                  </h3>
-                  <div className="flex gap-2">
-                    <div className="w-[40px] h-[40px] md:w-[45px] md:h-[45px] rounded-[22.34px] border-[1.49px] border-solid border-[#0649e7] flex items-center justify-center">
-                      <img
-                        className="w-[16px] h-[15px] md:w-[19px] md:h-[18px]"
-                        alt="LinkedIn"
-                        src="/shape-1.svg"
-                      />
-                    </div>
-                    <div className="w-[40px] h-[40px] md:w-[45px] md:h-[45px] rounded-[22.34px] border-[1.49px] border-solid border-[#0649e7] flex items-center justify-center">
-                      <img
-                        className="w-[16px] h-[15px] md:w-[19px] md:h-[18px]"
-                        alt="Social"
-                        src="/shape.svg"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+      {/* Contact Information grid */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* Address */}
+        <div>
+          <h3 className="font-semibold text-[#0649e7] text-lg tracking-[-0.5px] mb-2 underline">
+            Address
+          </h3>
+          <p className="font-medium text-[#0649e7] text-base leading-relaxed">
+            1875 Mission St Ste 103 #450 San Francisco, CA 94103
+          </p>
+        </div>
+
+        {/* Email */}
+        <div>
+          <h3 className="font-semibold text-[#0649e7] text-lg tracking-[-0.5px] mb-2 underline">
+            Email
+          </h3>
+          <a
+            href="mailto:finance@mobiusengine.ai"
+            className="font-medium text-[#0649e7] text-base underline"
+          >
+            finance@mobiusengine.ai
+          </a>
+        </div>
+
+        {/* Telephone */}
+        <div>
+          <h3 className="font-semibold text-[#0649e7] text-lg tracking-[-0.5px] mb-2 underline">
+            Telephone
+          </h3>
+          <p className="font-medium text-[#0649e7] text-base">
+            650-889-6026
+          </p>
+        </div>
+
+        {/* Socials */}
+        <div>
+          <h3 className="font-semibold text-[#0649e7] text-lg tracking-[-0.5px] mb-2 underline">
+            Socials
+          </h3>
+          <div className="flex gap-3 mt-2">
+            {/* LinkedIn */}
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#0649e7] flex items-center justify-center">
+              <img
+                className="w-5 h-5 md:w-6 md:h-6"
+                alt="LinkedIn"
+                src="/shape-1.svg"
+              />
             </div>
-
-            {/* Bottom footer with blue background */}
-            <div className="h-[60px] md:h-[69px] bg-[#0649e7] px-4 md:px-[103px] flex flex-col md:flex-row items-center justify-between py-4 md:py-0">
-              <p className="font-medium text-[#fefefe] text-sm md:text-base tracking-[-0.64px] leading-[16.6px] mb-2 md:mb-0">
-                © 2023 Mobiusservices LLC
-              </p>
-              <div className="flex gap-4 md:gap-[50px]">
-                <a href="#" className="font-medium text-[#fefefe] text-sm md:text-base tracking-[-0.64px] leading-[16.6px]">
-                  Terms & Conditions
-                </a>
-                <a href="#" className="font-medium text-[#fefefe] text-sm md:text-base tracking-[-0.64px] leading-[16.6px]">
-                  Privacy Policy
-                </a>
-              </div>
+            {/* Other Social */}
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#0649e7] flex items-center justify-center">
+              <img
+                className="w-5 h-5 md:w-6 md:h-6"
+                alt="Social"
+                src="/shape.svg"
+              />
             </div>
           </div>
-        </footer>
+        </div>
+      </div>
+    </div>
+
+    {/* Bottom footer */}
+    <div className="h-auto bg-[#0649e7] px-4 md:px-[103px] flex flex-col md:flex-row items-center justify-between py-6">
+      <p className="font-medium text-[#fefefe] text-sm md:text-base tracking-[-0.64px] mb-2 md:mb-0 text-center">
+        © 2023 Mobiusservices LLC
+      </p>
+      <div className="flex gap-6 mt-2 md:mt-0">
+        <a
+          href="#"
+          className="font-medium text-[#fefefe] text-sm md:text-base tracking-[-0.64px]"
+        >
+          Terms & Conditions
+        </a>
+        <span className="text-[#fefefe] hidden md:inline">|</span>
+        <a
+          href="#"
+          className="font-medium text-[#fefefe] text-sm md:text-base tracking-[-0.64px]"
+        >
+          Privacy Policy
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
       </div>
     </div>
   );
