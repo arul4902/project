@@ -203,21 +203,26 @@ export const Desktop = (): JSX.Element => {
 
         {/* How we work section */}
         <section className="mt-16 px-4 md:px-[310px]">
-          <h2 className="font-medium text-[#0649e7] text-[32px] md:text-[40px] tracking-[-1.60px] text-center md:text-left">
+          {/* Heading */}
+          <h2 className="font-medium text-[#0649e7] text-[28px] md:text-[32px] tracking-[-0.96px] text-center md:text-left mb-10">
             How we work?
           </h2>
-          <div className="flex flex-col md:flex-row justify-between mt-10 gap-8 md:gap-0">
+
+          {/* Steps */}
+          <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-0">
             {workSteps.map((step, index) => (
-              <div key={index} className="relative flex flex-col items-center md:items-start">
-                <div className="relative w-[70px] h-[70px] md:w-[82px] md:h-[82px] rounded-[40.82px] border-[1.51px] border-solid border-[#022183] flex items-center justify-center">
-                  <div className="font-normal text-black text-[40px] md:text-[56px]">{step.number}</div>
+              <div key={index} className="flex flex-col items-center md:items-start text-center md:text-left">
+                
+                {/* Circle with number */}
+                <div className="w-14 h-14 md:w-[66px] md:h-[66px] rounded-full border-[1.5px] border-[#0649e7] flex items-center justify-center text-[#0649e7] text-[20px] md:text-[24px] font-medium">
+                  {step.number}
                 </div>
-                <img
-                  className="w-[213px] h-0.5 mt-5 hidden md:block"
-                  alt="Line"
-                  src="/line-1.svg"
-                />
-                <p className="mt-5 font-medium text-[#0649e7] text-[20px] md:text-[26px] tracking-[-0.52px] max-w-[280px] text-center md:text-left">
+
+                {/* Line below the number */}
+                <div className="w-20 md:w-[80px] h-px bg-[#0649e7] mt-4"></div>
+
+                {/* Step text */}
+                <p className="mt-4 font-medium text-[#0649e7] text-[16px] md:text-[18px] leading-6 max-w-[220px]">
                   {step.title}
                 </p>
               </div>
@@ -226,73 +231,82 @@ export const Desktop = (): JSX.Element => {
         </section>
 
         {/* About Us section */}
-        <section className="mt-16 relative w-full h-auto md:h-[1140px]">
-          <img
-            className="absolute w-full h-full object-cover"
-            alt="Background"
-            src="/clip-path-group.png"
-          />
-          <div className="relative z-10 pt-[50px] md:pt-[133px] px-4 md:px-[316px]">
-            <h2 className="font-medium text-[#fefefe] text-[32px] md:text-[40px] tracking-[-1.60px] text-center md:text-left">
-              About Us
-            </h2>
-            <div className="flex flex-col md:flex-row mt-[50px] md:mt-[134px] gap-10">
-              <div className="relative h-[200px] w-[200px] md:h-[275px] md:w-[262px] mx-auto md:mx-0">
-                <div className="absolute w-[200px] h-[200px] md:w-[262px] md:h-[262px] top-0 left-0 bg-[#fefefe] rounded-[131.17px] bg-[url(/mask-group.png)] bg-cover" />
-                <div className="absolute w-14 h-14 md:w-20 md:h-20 top-[150px] left-[130px] md:top-[195px] md:left-[173px] bg-[#d9d9d94c] rounded-[39.8px] border-[1.06px] border-solid border-[#fefefe] backdrop-blur-[7.45px]" />
-                <img
-                  className="absolute w-[25px] h-[24px] md:w-[31px] md:h-[30px] top-[170px] left-[150px] md:top-[220px] md:left-[197px]"
-                  alt="Shape"
-                  src="/shape.svg"
-                />
-              </div>
-              <div className="max-w-[537px] text-[#fefefe] text-base md:text-lg text-center md:text-left">
-                <p>
-                  <span className="font-bold">Ashwin</span> is the founder of mobiusengine.ai. He is an accomplished senior
-                  executive with over 20 years of experience in cloud
-                  infrastructure and financial services. With over 2 decades of
-                  experience at Google and JP Morgan, Ashwin held various product
-                  and GTM roles. Ashwin is an MBA holder from Yale University.
-                  <br /><br />
-                  Ashwin's vision with Mobius is to give job seekers a
-                  significant advantage in securing the roles of their dreams.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row mt-[50px] md:mt-[80px] gap-10">
-              <div className="relative h-[200px] w-[200px] md:h-[279px] md:w-[266px] mx-auto md:mx-0">
-                <div className="absolute w-[200px] h-[200px] md:w-[266px] md:h-[266px] top-0 left-0 bg-[#fefefe] rounded-[133.08px] bg-[url(/image-3.png)] bg-cover" />
-                <div className="absolute w-14 h-14 md:w-[81px] md:h-[81px] top-[150px] left-[130px] md:top-[198px] md:left-[175px] bg-[#d9d9d94c] rounded-[40.38px] border-[1.06px] border-solid border-[#fefefe] backdrop-blur-[7.45px]" />
-                <img
-                  className="absolute w-6 h-[24px] md:w-8 md:h-[30px] top-[170px] left-[150px] md:top-56 md:left-[199px]"
-                  alt="Shape"
-                  src="/shape-1.svg"
-                />
-              </div>
-              <div className="max-w-[537px] text-[#fefefe] text-base md:text-lg text-center md:text-left">
-                <p>
-                  <span className="font-bold">Nicole</span> is an Executive coach at Mobius specializing in resume builds
-                  and career advisory. 
-                  <br /> <br />
-                  With a B.S. in Business Administration from UC Berkeley and 7+
-                  years of experience in AI-driven product strategy, she has seen
-                  firsthand how the proper positioning opens doors. She takes a
-                  targeted, results-driven approach to help clients confidently
-                  stand out and land roles that truly match their skills and
-                  potential.
-                </p>
-              </div>
-            </div>
-            <div className="mt-[50px] md:mt-[200px] text-center">
-              <p className="text-white text-base md:text-lg">
-                Learn more about our Board of Advisors ↗
-              </p>
-              <p className="text-white text-base md:text-lg mt-5">
-                Follow us on our Linkedin page ↗
-              </p>
-            </div>
-          </div>
-        </section>
+        <section className="mt-16 relative w-full h-auto min-h-screen">
+  <img
+    className="absolute w-full h-full object-cover"
+    alt="Background"
+    src="/clip-path-group.png"
+  />
+  <div className="relative z-10 pt-[50px] md:pt-[133px] px-4 md:px-[316px] pb-20">
+    {/* 👆 NEW: Added pb-20 here for bottom space */}
+
+    <h2 className="font-medium text-[#fefefe] text-[32px] md:text-[40px] tracking-[-1.60px] text-center md:text-left">
+      About Us
+    </h2>
+
+    <div className="flex flex-col md:flex-row mt-[50px] md:mt-[134px] gap-10">
+      <div className="relative h-[200px] w-[200px] md:h-[275px] md:w-[262px] mx-auto md:mx-0">
+        <div className="absolute w-[200px] h-[200px] md:w-[262px] md:h-[262px] top-0 left-0 bg-[#fefefe] rounded-[131.17px] bg-[url(/mask-group.png)] bg-cover" />
+        <div className="absolute w-14 h-14 md:w-20 md:h-20 top-[150px] left-[130px] md:top-[195px] md:left-[173px] bg-[#d9d9d94c] rounded-[39.8px] border-[1.06px] border-solid border-[#fefefe] backdrop-blur-[7.45px]" />
+        <img
+          className="absolute w-[25px] h-[24px] md:w-[31px] md:h-[30px] top-[170px] left-[150px] md:top-[220px] md:left-[197px]"
+          alt="Shape"
+          src="/shape.svg"
+        />
+      </div>
+      <div className="max-w-[537px] text-[#fefefe] text-base md:text-lg text-center md:text-left">
+        <p>
+          <span className="font-bold">Ashwin</span> is the founder of mobiusengine.ai. He is an accomplished senior
+          executive with over 20 years of experience in cloud
+          infrastructure and financial services. With over 2 decades of
+          experience at Google and JP Morgan, Ashwin held various product
+          and GTM roles. Ashwin is an MBA holder from Yale University.
+          <br /><br />
+          Ashwin's vision with Mobius is to give job seekers a
+          significant advantage in securing the roles of their dreams.
+        </p>
+      </div>
+    </div>
+
+    <div className="flex flex-col md:flex-row mt-[50px] md:mt-[80px] gap-10">
+      <div className="relative h-[200px] w-[200px] md:h-[279px] md:w-[266px] mx-auto md:mx-0">
+        <div className="absolute w-[200px] h-[200px] md:w-[266px] md:h-[266px] top-0 left-0 bg-[#fefefe] rounded-[133.08px] bg-[url(/image-3.png)] bg-cover" />
+        <div className="absolute w-14 h-14 md:w-[81px] md:h-[81px] top-[150px] left-[130px] md:top-[198px] md:left-[175px] bg-[#d9d9d94c] rounded-[40.38px] border-[1.06px] border-solid border-[#fefefe] backdrop-blur-[7.45px]" />
+        <img
+          className="absolute w-6 h-[24px] md:w-8 md:h-[30px] top-[170px] left-[150px] md:top-56 md:left-[199px]"
+          alt="Shape"
+          src="/shape-1.svg"
+        />
+      </div>
+      <div className="max-w-[537px] text-[#fefefe] text-base md:text-lg text-center md:text-left">
+        <p>
+          <span className="font-bold">Nicole</span> is an Executive coach at Mobius specializing in resume builds
+          and career advisory.
+          <br /><br />
+          With a B.S. in Business Administration from UC Berkeley and 7+
+          years of experience in AI-driven product strategy, she has seen
+          firsthand how the proper positioning opens doors. She takes a
+          targeted, results-driven approach to help clients confidently
+          stand out and land roles that truly match their skills and
+          potential.
+        </p>
+      </div>
+    </div>
+
+    {/* Updated Footer Section */}
+    <div className="mt-[80px] md:mt-[150px] text-center">
+      <p className="text-white text-sm md:text-base hover:underline cursor-pointer">
+        Learn more about our Board of Advisors ↗
+      </p>
+      <p className="text-white text-sm md:text-base mt-5 hover:underline cursor-pointer">
+        Follow us on our LinkedIn page ↗
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
 
         {/* Testimonials section */}
         <section className="mt-16 px-4 md:px-[310px]">
@@ -376,93 +390,60 @@ export const Desktop = (): JSX.Element => {
           </Card>
         </section>
 
-        {/* Job Application Service Plans */}
+        {/* Job Application Service Plans - Updated Section */}
         <section className="mt-16 px-4 md:px-[310px]">
           <h2 className="font-semibold text-[#0649e7] text-[32px] md:text-[40px] tracking-[-1.60px] text-center md:text-left">
             Job Application Service Plans
           </h2>
           <div className="flex flex-col md:flex-row gap-6 mt-10">
-            {pricingPlans.slice(0, 2).map((plan, index) => (
-              <Card key={index} className="w-full md:w-[398px] h-auto md:h-[900px] rounded-[35px] border-2 border-solid border-[#0649e7] bg-transparent">
-                <CardHeader className="pt-[27px] pb-0 px-[20px] md:px-[37px]">
-                  <div className="flex justify-between items-center">
-                    <CardTitle className="font-semibold text-[#0649e7] text-[26px] md:text-[32px] tracking-[-1.28px]">
-                      {plan.title}
-                    </CardTitle>
-                    {plan.popular && (
-                      <Badge className="bg-[#eaf0ff] text-[#0649e7] border border-[#0649e7] rounded-[35px] h-8 md:h-9 px-3 md:px-4 font-medium">
-                        Popular
-                      </Badge>
-                    )}
-                  </div>
-                  <div className="mt-6 md:mt-10 font-normal text-[#0649e7] text-[40px] md:text-[56px] tracking-[-2.24px]">
-                    <span className="font-bold">{plan.price}</span>
-                    <span className="font-bold text-[20px] md:text-[26px]">{plan.period}</span>
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-6 px-[20px] md:px-[37px]">
-                  <Separator className="mb-6 bg-[#0649e7]" />
-                  <ul className="space-y-4 md:space-y-5">
-                    {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-[20px] md:gap-[31px]">
-                        <div className="w-5 h-5 bg-[#49d157] rounded-[10px] flex items-center justify-center mt-0.5">
-                          <img
-                            className="w-[11px] h-2.5"
-                            alt="Check"
-                            src="/vector-2.svg"
-                          />
-                        </div>
-                        <span className="font-medium text-[#0649e7] text-base md:text-lg tracking-[-0.72px]">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter className="px-[20px] md:px-[33px] py-6 md:py-0">
+            {pricingPlans.map((plan, index) => (
+              <Card key={index} className="w-full md:w-[398px] h-auto rounded-[35px] border-2 border-solid border-[#0649e7] bg-transparent flex flex-col">
+                <div>
+                  <CardHeader className="pt-[27px] pb-0 px-[20px] md:px-[37px]">
+                    <div className="flex justify-between items-center">
+                      <CardTitle className="font-semibold text-[#0649e7] text-[26px] md:text-[32px] tracking-[-1.28px]">
+                        {plan.title}
+                      </CardTitle>
+                      {plan.popular && (
+                        <Badge className="bg-[#eaf0ff] text-[#0649e7] border border-[#0649e7] rounded-[35px] h-8 md:h-9 px-3 md:px-4 font-medium">
+                          Popular
+                        </Badge>
+                      )}
+                    </div>
+                    <div className="mt-6 md:mt-10 font-normal text-[#0649e7] text-[40px] md:text-[56px] tracking-[-2.24px]">
+                      <span className="font-bold">{plan.price}</span>
+                      <span className="font-bold text-[20px] md:text-[26px]">{plan.period}</span>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="pt-6 px-[20px] md:px-[37px]">
+                    <Separator className="mb-6 bg-[#0649e7]" />
+                    <ul className="space-y-4 md:space-y-5">
+                      {plan.features.map((feature, i) => (
+                        <li key={i} className="flex items-start gap-[20px] md:gap-[31px]">
+                          <div className="w-5 h-5 bg-[#49d157] rounded-[10px] flex items-center justify-center mt-0.5">
+                            <img
+                              className="w-[11px] h-2.5"
+                              alt="Check"
+                              src="/vector-2.svg"
+                            />
+                          </div>
+                          <span className="font-medium text-[#0649e7] text-base md:text-lg tracking-[-0.72px]">
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </div>
+                <CardFooter className="mt-auto px-[20px] md:px-[33px] pb-6 pt-0">
                   <Button className="w-full md:w-[211px] h-[50px] md:h-[62px] bg-[#0649e7] text-[#fefefe] rounded-[36px] text-lg md:text-xl font-semibold">
                     Get Started →
                   </Button>
                 </CardFooter>
               </Card>
             ))}
-            
-            <Card className="w-full md:w-[398px] h-auto md:h-[900px] rounded-[35px] border-2 border-solid border-[#0649e7] bg-transparent">
-              <CardHeader className="pt-[27px] pb-0 px-[20px] md:px-[37px]">
-                <CardTitle className="font-semibold text-[#0649e7] text-[26px] md:text-[32px] tracking-[-1.28px]">
-                  {pricingPlans[2].title}
-                </CardTitle>
-                <div className="mt-6 md:mt-10 font-normal text-[#0649e7] text-[40px] md:text-[56px] tracking-[-2.24px]">
-                  <span className="font-bold">{pricingPlans[2].price}</span>
-                  <span className="font-bold text-[20px] md:text-[26px]">{pricingPlans[2].period}</span>
-                </div>
-              </CardHeader>
-              <CardContent className="pt-6 px-[20px] md:px-[37px]">
-                <Separator className="mb-6 bg-[#0649e7]" />
-                <ul className="space-y-4 md:space-y-5">
-                  {pricingPlans[2].features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-[20px] md:gap-[31px]">
-                      <div className="w-5 h-5 bg-[#49d157] rounded-[10px] flex items-center justify-center mt-0.5">
-                        <img
-                          className="w-[11px] h-2.5"
-                          alt="Check"
-                          src="/vector-2.svg"
-                        />
-                      </div>
-                      <span className="font-medium text-[#0649e7] text-base md:text-lg tracking-[-0.72px]">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-              <CardFooter className="px-[20px] md:px-[33px] py-6 md:py-0">
-                <Button className="w-full md:w-[211px] h-[50px] md:h-[62px] bg-[#0649e7] text-[#fefefe] rounded-[36px] text-lg md:text-xl font-semibold">
-                  Get Started →
-                </Button>
-              </CardFooter>
-            </Card>
           </div>
+          
           {/* Advance plan */}
           <Card className="w-full h-auto md:h-[350px] bg-[#0649e7] rounded-[35px] mt-10 border-none">
             <CardContent className="flex flex-col md:flex-row justify-between p-0">
@@ -548,41 +529,45 @@ export const Desktop = (): JSX.Element => {
             Let's talk about where you're headed — and how your resume can get you there.{" "}
             <span className="font-bold">Schedule a call to get started.</span>
           </p>
-          <div className="flex flex-col md:flex-row justify-center gap-10 mt-10">
+
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-10 mt-10">
             {coachingServices.map((service, index) => (
-              <Card key={index} className="w-full md:w-[450px] h-auto md:h-[900px] rounded-[35px] border-2 border-solid border-[#0649e7] bg-transparent">
-                <CardHeader className="pt-7 pb-0 px-[20px] md:px-[37px]">
-                  <CardTitle className="font-semibold text-[#0649e7] text-[26px] md:text-[32px] tracking-[-1.28px]">
-                    {service.title}
-                  </CardTitle>
-                  <p className="mt-4 font-medium text-[#0649e7] text-base md:text-lg tracking-[-0.72px]">
-                    {service.description}
-                  </p>
-                  <div className="mt-6 md:mt-10 font-normal text-[#0649e7] text-[40px] md:text-[56px] tracking-[-2.24px]">
-                    <span className="font-bold">{service.price}</span>
-                    <span className="font-bold text-[20px] md:text-[26px]"> {service.period}</span>
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-6 px-[20px] md:px-[37px]">
-                  <Separator className="mb-6 bg-[#0649e7]" />
-                  <ul className="space-y-4 md:space-y-5">
-                    {service.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-[20px] md:gap-[31px]">
-                        <div className="w-5 h-5 bg-[#49d157] rounded-[10px] flex items-center justify-center mt-0.5">
-                          <img
-                            className="w-[11px] h-2.5"
-                            alt="Check"
-                            src="/vector-2.svg"
-                          />
-                        </div>
-                        <span className="font-medium text-[#0649e7] text-base md:text-lg tracking-[-0.72px]">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter className="px-[20px] md:px-[33px] py-6 md:py-0">
+              <Card
+                key={index}
+                className="w-full md:w-[450px] h-auto rounded-[35px] border-2 border-solid border-[#0649e7] bg-transparent flex flex-col justify-between"
+              >
+                <div>
+                  <CardHeader className="pt-7 pb-0 px-[20px] md:px-[37px]">
+                    <CardTitle className="font-semibold text-[#0649e7] text-[26px] md:text-[32px] tracking-[-1.28px]">
+                      {service.title}
+                    </CardTitle>
+                    <p className="mt-4 font-medium text-[#0649e7] text-base md:text-lg tracking-[-0.72px]">
+                      {service.description}
+                    </p>
+                    <div className="mt-6 md:mt-10 font-normal text-[#0649e7] text-[40px] md:text-[56px] tracking-[-2.24px]">
+                      <span className="font-bold">{service.price}</span>
+                      <span className="font-bold text-[20px] md:text-[26px]"> {service.period}</span>
+                    </div>
+                  </CardHeader>
+
+                  <CardContent className="pt-6 px-[20px] md:px-[37px]">
+                    <Separator className="mb-6 bg-[#0649e7]" />
+                    <ul className="space-y-4 md:space-y-5">
+                      {service.features.map((feature, i) => (
+                        <li key={i} className="flex items-start gap-[20px] md:gap-[31px]">
+                          <div className="w-5 h-5 bg-[#49d157] rounded-[10px] flex items-center justify-center mt-0.5">
+                            <img className="w-[11px] h-2.5" alt="Check" src="/vector-2.svg" />
+                          </div>
+                          <span className="font-medium text-[#0649e7] text-base md:text-lg tracking-[-0.72px]">
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </div>
+
+                <CardFooter className="px-[20px] md:px-[33px] pb-10 pt-0">
                   <Button className="w-full md:w-[211px] h-[50px] md:h-[62px] bg-[#0649e7] text-[#fefefe] rounded-[36px] text-lg md:text-xl font-semibold">
                     Get Started →
                   </Button>
@@ -603,110 +588,109 @@ export const Desktop = (): JSX.Element => {
           </Button>
         </section>
 
-       {/* Footer */}
-<footer className="w-full bg-[#0649e7] mt-16 md:mt-32">
-  <div className="max-w-[1920px] mx-auto">
-    {/* Upper footer with white background */}
-    <div className="bg-white px-4 md:px-[103px] pt-8 md:pt-[72px] pb-12 md:pb-[124px]">
-      
-      {/* Logo and company name side-by-side */}
-      <div className="flex items-center mb-12 md:mb-[100px] gap-4">
-        <img
-          className="w-[60px] md:w-[74px] h-[40px] md:h-12"
-          alt="Logo"
-          src="/group-21-1.png"
-        />
-        <div className="font-semibold text-[#0649e7] text-[20px] md:text-[25.3px] tracking-[-1.77px] leading-[37.4px]">
-          MobiusEngine
-        </div>
-      </div>
+        {/* Footer */}
+        <footer className="w-full bg-[#0649e7] mt-16 md:mt-32">
+          <div className="max-w-[1920px] mx-auto">
+            {/* Upper footer with white background */}
+            <div className="bg-white px-4 md:px-[103px] pt-8 md:pt-[72px] pb-12 md:pb-[124px]">
+              
+              {/* Logo and company name side-by-side */}
+              <div className="flex items-center mb-12 md:mb-[100px] gap-4">
+                <img
+                  className="w-[60px] md:w-[74px] h-[40px] md:h-12"
+                  alt="Logo"
+                  src="/group-21-1.png"
+                />
+                <div className="font-semibold text-[#0649e7] text-[20px] md:text-[25.3px] tracking-[-1.77px] leading-[37.4px]">
+                  MobiusEngine
+                </div>
+              </div>
 
-      {/* Contact Information grid */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* Address */}
-        <div>
-          <h3 className="font-semibold text-[#0649e7] text-lg tracking-[-0.5px] mb-2 underline">
-            Address
-          </h3>
-          <p className="font-medium text-[#0649e7] text-base leading-relaxed">
-            1875 Mission St Ste 103 #450 San Francisco, CA 94103
-          </p>
-        </div>
+              {/* Contact Information grid */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                {/* Address */}
+                <div>
+                  <h3 className="font-semibold text-[#0649e7] text-lg tracking-[-0.5px] mb-2 underline">
+                    Address
+                  </h3>
+                  <p className="font-medium text-[#0649e7] text-base leading-relaxed">
+                    1875 Mission St Ste 103 #450 San Francisco, CA 94103
+                  </p>
+                </div>
 
-        {/* Email */}
-        <div>
-          <h3 className="font-semibold text-[#0649e7] text-lg tracking-[-0.5px] mb-2 underline">
-            Email
-          </h3>
-          <a
-            href="mailto:finance@mobiusengine.ai"
-            className="font-medium text-[#0649e7] text-base underline"
-          >
-            finance@mobiusengine.ai
-          </a>
-        </div>
+                {/* Email */}
+                <div>
+                  <h3 className="font-semibold text-[#0649e7] text-lg tracking-[-0.5px] mb-2 underline">
+                    Email
+                  </h3>
+                  <a
+                    href="mailto:finance@mobiusengine.ai"
+                    className="font-medium text-[#0649e7] text-base underline"
+                  >
+                    finance@mobiusengine.ai
+                  </a>
+                </div>
 
-        {/* Telephone */}
-        <div>
-          <h3 className="font-semibold text-[#0649e7] text-lg tracking-[-0.5px] mb-2 underline">
-            Telephone
-          </h3>
-          <p className="font-medium text-[#0649e7] text-base">
-            650-889-6026
-          </p>
-        </div>
+                {/* Telephone */}
+                <div>
+                  <h3 className="font-semibold text-[#0649e7] text-lg tracking-[-0.5px] mb-2 underline">
+                    Telephone
+                  </h3>
+                  <p className="font-medium text-[#0649e7] text-base">
+                    650-889-6026
+                  </p>
+                </div>
 
-        {/* Socials */}
-        <div>
-          <h3 className="font-semibold text-[#0649e7] text-lg tracking-[-0.5px] mb-2 underline">
-            Socials
-          </h3>
-          <div className="flex gap-3 mt-2">
-            {/* LinkedIn */}
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#0649e7] flex items-center justify-center">
-              <img
-                className="w-5 h-5 md:w-6 md:h-6"
-                alt="LinkedIn"
-                src="/shape-1.svg"
-              />
+                {/* Socials */}
+                <div>
+                  <h3 className="font-semibold text-[#0649e7] text-lg tracking-[-0.5px] mb-2 underline">
+                    Socials
+                  </h3>
+                  <div className="flex gap-3 mt-2">
+                    {/* LinkedIn */}
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#0649e7] flex items-center justify-center">
+                      <img
+                        className="w-5 h-5 md:w-6 md:h-6"
+                        alt="LinkedIn"
+                        src="/shape-1.svg"
+                      />
+                    </div>
+                    {/* Other Social */}
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#0649e7] flex items-center justify-center">
+                      <img
+                        className="w-5 h-5 md:w-6 md:h-6"
+                        alt="Social"
+                        src="/shape.svg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            {/* Other Social */}
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#0649e7] flex items-center justify-center">
-              <img
-                className="w-5 h-5 md:w-6 md:h-6"
-                alt="Social"
-                src="/shape.svg"
-              />
+
+            {/* Bottom footer */}
+            <div className="h-auto bg-[#0649e7] px-4 md:px-[103px] flex flex-col md:flex-row items-center justify-between py-6">
+              <p className="font-medium text-[#fefefe] text-sm md:text-base tracking-[-0.64px] mb-2 md:mb-0 text-center">
+                © 2023 Mobiusservices LLC
+              </p>
+              <div className="flex gap-6 mt-2 md:mt-0">
+                <a
+                  href="#"
+                  className="font-medium text-[#fefefe] text-sm md:text-base tracking-[-0.64px]"
+                >
+                  Terms & Conditions
+                </a>
+                <span className="text-[#fefefe] hidden md:inline">|</span>
+                <a
+                  href="#"
+                  className="font-medium text-[#fefefe] text-sm md:text-base tracking-[-0.64px]"
+                >
+                  Privacy Policy
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    {/* Bottom footer */}
-    <div className="h-auto bg-[#0649e7] px-4 md:px-[103px] flex flex-col md:flex-row items-center justify-between py-6">
-      <p className="font-medium text-[#fefefe] text-sm md:text-base tracking-[-0.64px] mb-2 md:mb-0 text-center">
-        © 2023 Mobiusservices LLC
-      </p>
-      <div className="flex gap-6 mt-2 md:mt-0">
-        <a
-          href="#"
-          className="font-medium text-[#fefefe] text-sm md:text-base tracking-[-0.64px]"
-        >
-          Terms & Conditions
-        </a>
-        <span className="text-[#fefefe] hidden md:inline">|</span>
-        <a
-          href="#"
-          className="font-medium text-[#fefefe] text-sm md:text-base tracking-[-0.64px]"
-        >
-          Privacy Policy
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
-
+        </footer>
       </div>
     </div>
   );
